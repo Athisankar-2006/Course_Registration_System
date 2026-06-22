@@ -20,10 +20,21 @@ public class CoursesController {
        return courseService.availableCourses();
     }
 
+    @PostMapping("/courses")
+    public String addCourse(@RequestBody Course course){
+        return courseService.addCourse(course);
+    }
+
 
     @GetMapping("/courses/enrolled")
     public List<CourseRegistry> entrolledstudent(){
         return courseService.entrolledstudent();
+    }
+
+
+    @GetMapping("/test")
+    public String tect(){
+        return "running";
     }
 
     @PostMapping("/courses/register")

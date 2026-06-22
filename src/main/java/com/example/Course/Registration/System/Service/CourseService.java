@@ -37,4 +37,10 @@ public class CourseService {
         cr.setEmailId(emailId);
         courseRegistryRepo.save(cr);
     }
+
+    public String addCourse(Course course) {
+
+        courserepo.save(course);
+        return "added";
+    }
 }
